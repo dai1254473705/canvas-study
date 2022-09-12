@@ -1,0 +1,17 @@
+{
+  "name": "spider",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bizhi.js",
+  "scripts": {
+    "start": "node bizhi.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.12",
+    "fs-extra": "^10.1.0",
+    "image-js": "^0.35.1"
+  }
+}
