@@ -4,8 +4,8 @@ const path = require('path');
  */
 module.exports = {
     filePath: {
-        rootDir: path.resolve(__dirname,'../file/'),
-        subDir: 'bizhi/',
+        rootDir: path.resolve(__dirname,'../wechat-images-lib/'),
+        subDir: '/bizhi/',
     },
-    bizhiUrl: 'https://mp.weixin.qq.com/s/ZJH22wq9aovXrGlyA7MmiA', // 要爬的地址
+    bizhiUrl: '', // 要爬的地址
 };

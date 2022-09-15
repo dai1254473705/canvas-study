@@ -12,7 +12,12 @@ const axios = require("axios");
  * @method POST
  */
 const start = async () => {
-  const url = process.argv[2] || CONFIG.bizhiUrl;
+  // const url = process.argv[2] || CONFIG.bizhiUrl;
+  const url = process.argv[2];
+  if (!url) {
+    console.log("没有地址");
+    return;
+  }
   try {
     const result = await axios({
       method: "get",
@@ -32,16 +37,16 @@ const start = async () => {
     const $ = cheerio.load(result.data);
     // 获取当前图片地址
     const img = $("img");
-    console.log(img);
     const { filePath } = CONFIG;
     // 生成日期的目录
     const currentDate = new Date();
     const year = currentDate.getFullYear();
     const month = currentDate.getMonth() + 1;
-    const date = currentDate.getDate();
-    const dirName = `${year}/${month > 9 ? month : "0" + month}/${
-      date > 9 ? date : "0" + date
-    }/`;
+    // const date = currentDate.getDate();
+    // const dirName = `${year}/${month > 9 ? month : "0" + month}/${
+    //   date > 9 ? date : "0" + date
+    // }/`;
+    const dirName = `${year}/${month > 9 ? month : "0" + month}/`;
     for (let i = 0, len = img.length; i < len; i++) {
       const imgUrl = $(img[i]).attr("data-src");
       const imgType = $(img[i]).attr("data-type");
@@ -51,13 +56,30 @@ const start = async () => {
         const name = `${fileName}.jpg`;
         const saveFilePath = `${filePath.rootDir}${filePath.subDir}${dirName}`;
         const newPathFile = `${saveFilePath}${name}`;
-        // const cachePath = path.join(__dirname, "../../cache/");
         fse.ensureDirSync(saveFilePath);
+        fse.ensureDirSync(`${saveFilePath}HD`);
+        fse.ensureDirSync(`${saveFilePath}FULL`);
         // 下载图片
         await download(imgUrl, newPathFile);
         // 压缩尺寸统一宽度为600
-        // const img = await Image.load(newPathFile);
-        // await img.resize({ width: 800 }).save(cachePath + name);
+        const img = await Image.load(newPathFile);
+        const { width, height } = img;
+        const rate = width / height;
+        // 小于900删除
+        if (width < 900 || height < 900) {
+          console.log("删除文件", width, height);
+          // 删除
+          await fse.removeSync(newPathFile);
+        }
+        // 高清
+        else if (rate > 0.5) {
+          console.log("移动文件HD");
+          await fse.move(newPathFile, `${saveFilePath}HD/${name}`);
+          // 移动
+        } else {
+          console.log("移动文件FULL");
+          await fse.move(newPathFile, `${saveFilePath}FULL/${name}`);
+        }
       }
     }
   } catch (error) {
