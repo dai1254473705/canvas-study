@@ -7,13 +7,36 @@ const { Image } = require("image-js");
 const axios = require("axios");
 
 /**
+ * 秒
+ * @param {*} durtion 
+ * @returns 
+ */
+const sleep = (durtion)=>{
+  return new Promise((resolve)=>{
+    setTimeout(() => {
+      resolve();
+    }, durtion * 1000);
+  })
+}
+
+const test = (durtion)=>{
+  return new Promise((resolve)=>{
+    setTimeout(() => {
+      console.log('234234')
+      resolve();
+    }, durtion * 1000);
+  })
+}
+/**
  * @router http://127.0.0.1:7001/hope/api/v2/spider/wechat
  * @param {String} pageUrl 页面的地址
  * @method POST
  */
-const start = async () => {
-  // const url = process.argv[2] || CONFIG.bizhiUrl;
-  const url = process.argv[2];
+const start = async (singleUrl,index) => {
+  console.info(`
+    开始第 ${index} 条数据，${singleUrl}
+  `);
+  const url = process.argv[2] || singleUrl;
   if (!url) {
     console.log("没有地址");
     return;
@@ -125,4 +148,13 @@ const download = async (imgurl, dir) => {
     console.error(error);
   }
 };
-start();
+const batchRequest = async()=>{
+   for (let i=0;i< CONFIG.bizhiUrl.length;i++){
+    const url = CONFIG.bizhiUrl[i];
+    await sleep(3);
+    await start(url,i);
+  }
+};
+batchRequest();
+
+// start();
