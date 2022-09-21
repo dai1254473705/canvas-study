@@ -82,14 +82,20 @@ const start = async (singleUrl,index) => {
         fse.ensureDirSync(saveFilePath);
         fse.ensureDirSync(`${saveFilePath}HD`);
         fse.ensureDirSync(`${saveFilePath}FULL`);
+        fse.ensureDirSync(`${saveFilePath}touxiang`);
         // 下载图片
         await download(imgUrl, newPathFile);
         // 压缩尺寸统一宽度为600
         const img = await Image.load(newPathFile);
         const { width, height } = img;
         const rate = width / height;
+        // 如果1:1，就是头像
+        if (rate ===1) {
+          console.log("移动文件touxiang");
+          await fse.move(newPathFile, `${saveFilePath}touxiang/${name}`);
+        }
         // 小于900删除
-        if (width < 900 || height < 900) {
+        else if (width < 900 || height < 900) {
           console.log("删除文件", width, height);
           // 删除
           await fse.removeSync(newPathFile);
@@ -151,7 +157,7 @@ const download = async (imgurl, dir) => {
 const batchRequest = async()=>{
    for (let i=0;i< CONFIG.bizhiUrl.length;i++){
     const url = CONFIG.bizhiUrl[i];
-    await sleep(3);
+    await sleep(5);
     await start(url,i);
   }
 };
