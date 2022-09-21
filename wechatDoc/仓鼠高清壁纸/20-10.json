@@ -1,0 +1,122 @@
+{
+  "list": [
+    {
+      "comm_msg_info": {
+        "id": 1000000193,
+        "type": 49,
+        "datetime": 1659861300,
+        "fakeid": "3884517276",
+        "status": 2,
+        "content": ""
+      },
+      "app_msg_ext_info": {
+        "title": "手机壁纸，元气满满",
+        "digest": "昔日的风，吹动了我的青春Hello 壁纸和音乐在一个动物王国里，住着小象、乌龟、鳄鱼，还有猪，非常团结友爱，",
+        "content": "",
+        "fileid": 100014990,
+        "content_url": "http://mp.weixin.qq.com/s?__biz=Mzg4NDUxNzI3Ng==&amp;mid=2247498751&amp;idx=1&amp;sn=3d23c160c7499d738b62ed18dc815eed&amp;chksm=cfb44b0cf8c3c21a97f1be66c3dc2163d78d917aa16a9acb24737a1a59ab0388070c44f80150&amp;scene=27#wechat_redirect",
+        "source_url": "",
+        "cover": "https://mmbiz.qpic.cn/mmbiz_jpg/icKUrsywce6jW9nnowpic1bLhmHmgCrf1liccqUtQAyZB72UdBAotLKZKDFQrzL7yCE1kmkFJeNYhyBEgfqdFaFMw/0?wx_fmt=jpeg",
+        "subtype": 9,
+        "is_multi": 1,
+        "multi_app_msg_item_list": [
+          {
+            "title": "手机壁纸，不错",
+            "digest": "每隔一天更新新的手机壁纸“见面就是礼物”仓鼠高清壁纸分享更多手机壁纸Love can be weakness",
+            "content": "",
+            "fileid": 0,
+            "content_url": "http://mp.weixin.qq.com/s?__biz=Mzg4NDUxNzI3Ng==&amp;mid=2247498751&amp;idx=2&amp;sn=756e783e3d41f6e027c235cfbe7165ce&amp;chksm=cfb44b0cf8c3c21a8334081436bc33a4acce879e4fe868c45e889ac229a31798f233a2cf17eb&amp;scene=27#wechat_redirect",
+            "source_url": "",
+            "cover": "https://mmbiz.qpic.cn/mmbiz_jpg/icKUrsywce6jW9nnowpic1bLhmHmgCrf1ldjWnzKptemuTTPZP7nJyGR8rDic2UjkFsgyaaVXZplkBPoTXsSUtn0w/0?wx_fmt=jpeg",
+            "author": "两个梨",
+            "copyright_stat": 100,
+            "del_flag": 1,
+            "item_show_type": 0,
+            "audio_fileid": 0,
+            "duration": 0,
+            "play_url": "",
+            "malicious_title_reason_id": 0,
+            "malicious_content_type": 0
+          }
+        ],
+        "author": "两个梨",
+        "copyright_stat": 100,
+        "duration": 0,
+        "del_flag": 1,
+        "item_show_type": 0,
+        "audio_fileid": 0,
+        "play_url": "",
+        "malicious_title_reason_id": 0,
+        "malicious_content_type": 0
+      }
+    },
+    {
+      "comm_msg_info": {
+        "id": 1000000192,
+        "type": 49,
+        "datetime": 1659688500,
+        "fakeid": "3884517276",
+        "status": 2,
+        "content": ""
+      },
+      "app_msg_ext_info": {
+        "title": "手机壁纸，赞",
+        "digest": "昔日的风，吹动了我的青春Hello 壁纸和音乐我是一只普通的小猴，却有着非比寻常的抱负，我立志要超过我的祖先",
+        "content": "",
+        "fileid": 100014835,
+        "content_url": "http://mp.weixin.qq.com/s?__biz=Mzg4NDUxNzI3Ng==&amp;mid=2247498566&amp;idx=1&amp;sn=4c31fa4cc2c8b150f8645245332714bd&amp;chksm=cfb44bb5f8c3c2a3f42136217133b0634dd5740bd5836d39f11589d4628510004785fa847e57&amp;scene=27#wechat_redirect",
+        "source_url": "",
+        "cover": "https://mmbiz.qpic.cn/mmbiz_jpg/icKUrsywce6jW9nnowpic1bLhmHmgCrf1lnSMXZ2qNdC6oe1UnVPPPFf6sCgphr5C0A2WmZ55iafljwf6N1iafvjUg/0?wx_fmt=jpeg",
+        "subtype": 9,
+        "is_multi": 1,
+        "multi_app_msg_item_list": [
+          {
+            "title": "好看的手机壁纸",
+            "digest": "每隔一天更新新的手机壁纸“只要坚持付出，再微小的努力也终将会获得成功”Dreams without goal",
+            "content": "",
+            "fileid": 0,
+            "content_url": "http://mp.weixin.qq.com/s?__biz=Mzg4NDUxNzI3Ng==&amp;mid=2247498566&amp;idx=2&amp;sn=832b30eec02461cd051345b35d3ccdfb&amp;chksm=cfb44bb5f8c3c2a3f45bc71a35dd1f3105c14f61aeadfb6cc787c194de8c452d106b35f48f82&amp;scene=27#wechat_redirect",
+            "source_url": "",
+            "cover": "https://mmbiz.qpic.cn/mmbiz_jpg/icKUrsywce6j9seDRB9kZJ8dS0sLIhDZ4UXDK29ens8pLmc5V4v8GFgwxP19LKTZwT3siajzjT8fWXq4mtLCvXSQ/0?wx_fmt=jpeg",
+            "author": "两个梨",
+            "copyright_stat": 100,
+            "del_flag": 1,
+            "item_show_type": 0,
+            "audio_fileid": 0,
+            "duration": 0,
+            "play_url": "",
+            "malicious_title_reason_id": 0,
+            "malicious_content_type": 0
+          },
+          {
+            "title": "头像不容错过",
+            "digest": "热门头像夏天是什么样子的？凌晨安静的街道，可乐雪碧里冒出的气泡，蓝蓝的天空，三五好友在谈笑，西瓜，冰棍，还有",
+            "content": "",
+            "fileid": 0,
+            "content_url": "http://mp.weixin.qq.com/s?__biz=Mzg4NDUxNzI3Ng==&amp;mid=2247498566&amp;idx=3&amp;sn=abd4a7c28ff9761c802491b7bae494a8&amp;chksm=cfb44bb5f8c3c2a3ee645bc90dffea1a32e2f3c41edf9cbec78fe0a41d3534b9e14d491e0258&amp;scene=27#wechat_redirect",
+            "source_url": "",
+            "cover": "https://mmbiz.qpic.cn/mmbiz_jpg/icKUrsywce6j9seDRB9kZJ8dS0sLIhDZ4HicWlpfhG8XDdcZF1j6CCE9acgAa96PrOCOCHT8ZeYtZ62jt8ibgtCHg/0?wx_fmt=jpeg",
+            "author": "两个梨",
+            "copyright_stat": 100,
+            "del_flag": 1,
+            "item_show_type": 0,
+            "audio_fileid": 0,
+            "duration": 0,
+            "play_url": "",
+            "malicious_title_reason_id": 0,
+            "malicious_content_type": 0
+          }
+        ],
+        "author": "两个梨",
+        "copyright_stat": 100,
+        "duration": 0,
+        "del_flag": 1,
+        "item_show_type": 0,
+        "audio_fileid": 0,
+        "play_url": "",
+        "malicious_title_reason_id": 0,
+        "malicious_content_type": 0
+      }
+    }
+  ]
+}
