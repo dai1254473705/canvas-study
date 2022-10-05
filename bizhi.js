@@ -60,6 +60,7 @@ const start = async (singleUrl,index) => {
     const $ = cheerio.load(result.data);
     // 获取当前图片地址
     const img = $("img");
+    // fse.writeFileSync("./test.html", img.toString());
     const { filePath } = CONFIG;
     // 生成日期的目录
     const currentDate = new Date();
@@ -71,9 +72,11 @@ const start = async (singleUrl,index) => {
     // }/`;
     const dirName = `${year}/${month > 9 ? month : "0" + month}/`;
     for (let i = 0, len = img.length; i < len; i++) {
+      if (!img[i]){
+        break;
+      }
       const imgUrl = $(img[i]).attr("data-src");
-      const imgType = $(img[i]).attr("data-type");
-      const isInclude = ["jpeg", "jpg", "png", "webp"].includes(imgType);
+      const isInclude = /jpeg|jpg|png|webp/.test(imgUrl);
       if (imgUrl && isInclude) {
         const fileName = new Date().getTime();
         const name = `${fileName}.jpg`;
