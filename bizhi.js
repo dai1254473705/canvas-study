@@ -70,7 +70,8 @@ const start = async (singleUrl,index) => {
     // const dirName = `${year}/${month > 9 ? month : "0" + month}/${
     //   date > 9 ? date : "0" + date
     // }/`;
-    const dirName = `${year}/${month > 9 ? month : "0" + month}/`;
+    // const dirName = `${year}/${month > 9 ? month : "0" + month}/`;
+    const dirName = `${year}/`;
     for (let i = 0, len = img.length; i < len; i++) {
       if (!img[i]){
         break;
@@ -93,7 +94,7 @@ const start = async (singleUrl,index) => {
         const { width, height } = img;
         const rate = width / height;
         // 如果1:1，就是头像
-        if (rate ===1) {
+        if (Number(rate.toFixed(2)) === 1) {
           console.log("移动文件touxiang");
           await fse.move(newPathFile, `${saveFilePath}touxiang/${name}`);
         }
