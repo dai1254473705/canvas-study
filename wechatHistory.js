@@ -12,15 +12,16 @@ const saveData = async(accountName,fileName,data)=>{
   await fse.ensureFileSync(rootPath);
   fse.writeJsonSync(rootPath, data)
 }
+
 const getData = async (accountName,offset = 10, count = 10) => {
   try {
     const config = {
       pass_ticket:
-        "wcFfIX924MrvM2atKkelhrgGk9VeG53c4jebPWQppDlHZwJB5VK0mdyxmcM78mw1",
+        "L83N9aSqaRTwZIk2XN0 iUwi5DyDFWP86y54zZCRd3xm5QcBLzEmCQ4LXmZ2dKf37Mtw4iLhmXdEyljWLFmGPg==",
       wap_sid2:
-        "CNu3t4gLEooBeV9IUHd1Wk1jQ25hakN3SmpkN2VLanVqWXpDMXpISHJkbmNDbkljSWo0WnEzQUNaTVpDdlRQMzNzZ0pGa0s1T3RQWWctRzZBZmRVbUV2ZFF0WnJmcGtvM1BpMG9RVlkwRUZta3J6Z2x2YXIwQkUtaDNJNTU4RzVka2M3N0pCd0lXc2FuMFNBQUF+MMqyqpkGOA1AlU4=",
-      appmsg_token: "1183_Ffg2Jwgx%2FWLvoyIw1s_NRUHIDXUso1F44KzcXg~~",
-      __biz: "MzI2MjAyNzQ4MQ==",
+        "CNu3t4gLEooBeV9ISkMyZjVTWFU2RHFkdTR1WFRwUnlTa3ZydzlrQzQyRVRna3hPbWlFSXhpUmM3UjIzeG9CemN2aHd3STlNN3BPWXBwbkRUZVBOZ2FUSDVVT3ZULTZ3cVUwZU9NNGNwbWtjTEpEb2JPXzhDUDV1eG96eHprVkhMSVNNbVlCa3RUMUJNZ1NBQUF+MMLb9a4GOA1AlU4=",
+      appmsg_token: "1258_JCiegp6PM4OGx137SCpkcCMtPTeksKfVOn5iMQ~~&x5=0",
+      __biz: "Mzg4NDg4NzQ3Nw==",
     };
     const { data } = await axios({
       method: "get",
@@ -44,9 +45,9 @@ const getData = async (accountName,offset = 10, count = 10) => {
 
 // 仓鼠高清壁纸
 // 手机壁纸美图
-// timer = setInterval(() => {
-//   console.log('当前获取第',start,'页数据');
-//   getData('手机壁纸美图',start,10);
-//   start += 10;
-// }, 5000);
-getData('手机壁纸美图',2030,10);
+timer = setInterval(() => {
+  console.log('当前获取第',start,'页数据');
+  getData('美女墙纸',start,10);
+  start += 10;
+}, 3000);
+

@@ -8,14 +8,14 @@
  */
 const fs = require("fs");
 const fse = require("fs-extra");
-
+const filePath = '小姐姐美女';
 let allData = [];
-const files = fs.readdirSync("./wechatDoc/手机壁纸美图/");
+const files = fs.readdirSync(`./wechatDoc/${filePath}/`);
 files.forEach((item, index) => {
   if (item === "content_url.json") {
     return;
   }
-  const data = require(`./手机壁纸美图/${item}`);
+  const data = require(`./${filePath}/${item}`);
   if (!Array.isArray(data?.list)) {
     return;
   }
@@ -24,7 +24,7 @@ files.forEach((item, index) => {
   allData = allData.concat(titles);
 });
 console.log(allData, "allData");
-fse.writeJsonSync("./wechatDoc/手机壁纸美图/content_url.json", allData);
+fse.writeJsonSync(`./wechatDoc/${filePath}/content_url.json`, allData);
 
 function getData(data, atrr) {
   var ss = [];
