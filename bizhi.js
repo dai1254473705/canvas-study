@@ -99,7 +99,7 @@ const start = async (singleUrl,index) => {
           await fse.move(newPathFile, `${saveFilePath}touxiang/${name}`);
         }
         // 小于900删除
-        else if (width < 900 || height < 900) {
+        else if (width < 900 || height < 900 || rate > 0.6) {
           console.log("删除文件", width, height);
           // 删除
           await fse.removeSync(newPathFile);
@@ -109,7 +109,8 @@ const start = async (singleUrl,index) => {
           console.log("移动文件HD");
           await fse.move(newPathFile, `${saveFilePath}HD/${name}`);
           // 移动
-        } else {
+        } 
+        else {
           console.log("移动文件FULL");
           await fse.move(newPathFile, `${saveFilePath}FULL/${name}`);
         }
